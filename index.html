@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+              }
+            }
+          }
+        }
+      </script>
+
+<script src="https://kit.fontawesome.com/ae2231ae5f.js" crossorigin="anonymous"></script>
+      
+<link href="https://cdn.jsdelivr.net/npm/daisyui@3.9.4/dist/full.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.tailwindcss.com"></script>
+
+<link rel="stylesheet" href="style.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+ 
+</head>
+<body>
+    
+<header id="navbar" class="bg-slate-200  border-b-2 border-gray-300  sticky top-0 z-30 hidden ">
+    <nav  class="w-11/12 mx-auto py-7 flex items-center justify-between ">
+        <div class="flex items-center ">
+            <div><h1 class="poppins text-xl font-semibold">English</h1></div>
+            <div><img src="assets/logo.png" alt=""></div>
+            <div><h1 class="tiro-bangla text-xl font-normal">জানালা</h1></div>
+        </div>
+        <div class="flex gap-4 ">
+            <div> <a href="#FAQ"> <button class="btn bg-transparent outline outline-2 outline-[#422AD5]   text-[#422AD5]  "><img src="assets/fa-circle-question.png"  alt="">FAQ</button></a> </div>
+            <div><a href="#learn-vocabulary"> <button class="btn bg-transparent outline outline-2 outline-[#422AD5]   text-[#422AD5]  "><img src="assets/fa-book-open.png" alt="">Learn</button></a></div>
+            <div><button onclick="logout(event)" class="btn bg-transparent outline outline-2 outline-[#422AD5]   text-[#422AD5] space-x-1 "><img src="assets/fa-arrow-right-from-bracket.png" alt="">Logout</button></div>
+        </div>
+        </nav>
+</header>
+<!-- -----------------HERO CONTENT----------- -->
+<section id="hero" class="pl-24 pr-16 flex items-center justify-between ">
+    <div class="">
+        <h1 class="text-[39px] poppins font-bold"> <span class="text-[#00BCFF]">English</span> is Easy!!</h1>
+        <p class="hind-siliguri text-2xl font-medium leading-10">আজ থেকেই আপনার ভাষা শেখার যাত্রা শুরু করুন। আপনি যদি নতুন হন অথবা <br> আপনার দক্ষতা বাড়াতে চান, আমাদের Interactive Lessons আপনাকে নিয়ে <br> যাবে অন্য একটি Level এ</p>
+    
+
+        <!-- ---------------LOGIN FORM------- -->
+        <form class="py-10 ">
+            <div class="mb-5">
+             
+              <input  id="name" type="text" placeholder="Enter Your Name" class="input input-bordered" required />
+            </div>
+            <div >
+              
+              <input  id="pass" type="password" placeholder="Enter Your password" class="input input-bordered" required />
+              
+            </div>
+            <div class=" mt-6">
+              <button onclick="getStart(event)" class="btn btn-primary text-[#E0E7FF] text-sm font-semibold poppins">Get Started</button>
+            </div>
+          </form>
+    
+    
+      
+    </div>
+    <div>
+        <img class="py-5" src="assets/hero-student.png" alt="">
+    </div>
+   
+</section>
+            <!-- LETS LEARN VOCABULARIES -->
+
+<section id="learn-vocabulary" class="pt-52  mx-auto w-11/12 text-center hidden "> 
+<h1 class="text-4xl poppins font-bold " > <span  class="text-[#00BCFF]">Let's</span> Learn Vocabularies</h1>
+<div id="lesson-btn" class="flex gap-5 py-10 items-center justify-center">
+   
+</div>
+
+
+
+<div id="card-container" class="bg-[#F8F8F8] mb-9 p-8 rounded-3xl grid grid-cols-3 gap-8 items-stretch">
+ 
+  
+
+
+<div class="py-16 text-center col-span-full space-y-4">
+   
+    <p class=" hind-siliguri font-normal text-sm">আপনি এখনো কোন Lesson Select করেন নি</p> 
+    <h1 class=" hind-siliguri font-medium text-4xl mt-3">একটি Lesson Select করুন।</h1>
+</div>
+
+</div>
+
+
+</section>
+
+    <!-- -----------------FAQ SECTION--------- -->
+
+<section id="FAQ" class="w-11/12 mx-auto space-y-[20px] pt-52 hidden">
+    <h1 class="text-4xl poppins font-bold text-center mb-20" > <span class="text-[#00BCFF]">Frequently </span> Asked Questions</h1>
+   
+   
+    <div class="collapse collapse-plus bg-base-200">
+      <input type="radio" name="my-accordion-3" checked="checked" /> 
+      <div class="collapse-title poppins  text-base font-bold">
+        1. Write the difference between var, let, and const.
+      </div>
+      <div class="collapse-content poppins  text-base font-normal"> 
+        <p>we can use var outside the function even if it is declared within the function it won't show any error .it is function scoped and can be redeclared. on the other hand let can be updated but not redeclared. while const is block scoped. we can not use it or update it outside the function</p>
+      </div>
+    </div>
+    <div class="collapse collapse-plus bg-base-200 ">
+      <input type="radio" name="my-accordion-3" /> 
+      <div class="collapse-title poppins  text-base font-bold">
+       2. what are the difference between map(), forEach(), and filter()?
+      </div>
+      <div class="collapse-content poppins  text-base font-normal"> 
+        <p>map() creates a new array by doing operation to each element and returns the modified values. foreach() executes a function on each element but does not return anything like we can loop through each element of given input but can not do anything with them. filter() creates a nww array containing only the elements that meets the condition. arrao function is lexically blind. which means they inherit it from sorrounding context.  </p>
+      </div>
+    </div>
+    <div class="collapse collapse-plus bg-base-200">
+      <input type="radio" name="my-accordion-3" /> 
+      <div class="collapse-title poppins  text-base font-bold">
+        3. Explain arrow functions and how they are different from regular functions.
+      </div>
+      <div class="collapse-content poppins  text-base font-normal"> 
+        <p>Regular function use function keyword while arrow function us => syntax. arrow function is much shorter then the regular. we can write code in one line without using return in arrow function .</p>
+      </div>
+    </div>
+    <div class="collapse collapse-plus bg-base-200">
+      <input type="radio" name="my-accordion-3" /> 
+      <div class="collapse-title poppins  text-base font-bold">
+        4. How JavaScript Promises work?
+      </div>
+      <div class="collapse-content poppins  text-base font-normal"> 
+        <p> JavaScript Promises works by handeling asynchronous operation by representing values that may be fullfilled rejected ,or pending. </p>
+      </div>
+    </div>
+    <div class="collapse collapse-plus bg-base-200">
+      <input type="radio" name="my-accordion-3" /> 
+      <div class="collapse-title poppins  text-base font-bold">
+        5. How closures work in JavaScript?
+      </div>
+      <div class="collapse-content poppins  text-base font-normal"> 
+        <p>A closure is a function that remembers the value of variables from its outer scope, even after the outer function has finished executing.</p>
+      </div>
+    </div>
+</section>
+
+
+
+
+<footer class="mt-52 border-t-[3px] border-[#FFEBEB] ">
+   
+   <div class="flex items-end w-11/12 mx-auto py-[100px] justify-between">
+    <div class="">
+        <div class="flex items-center  ">
+            <div><h1 class="poppins text-xl font-semibold">English</h1></div>
+            <div><img src="assets/logo.png" alt=""></div>
+            <div><h1 class="tiro-bangla text-xl font-mediumm">জানালা</h1></div>
+        </div>
+        <h1 class="hind-siliguri text-xl font-semibold mt-5">ইংরেজি শিখুন সহজে</h1>
+        <p class="hind-siliguri text-xl font-normal ">Providing ED-Tech Applications since 2025</p>
+    </div>
+    <div>
+        <h6 class="poppins font-semibold text-sm text-[#18181B] mb-4">Follow us</h6>
+        <div class="flex gap-4 items-center">
+        <div> <a href="https://www.facebook.com/" target="_blank"><img src="assets/fb-thumb.png" alt=""></a> </div>
+        <div>  <a href="https://www.youtube.com/" target="_blank"><img src="assets/youtube-thumb.png" alt=""></a></div>
+        <div>  <a href="https://www.instagram.com/" target="_blank"><img src="assets/instagram-thumb.png" alt=""></a></div>
+        <div><a href="https://github.com/" target="_blank"> <img src="assets/github-thumb.png" alt=""></a></div>
+    </div>
+    </div>
+   </div> 
+
+</footer>
+
+
+<!-- You can open the modal using ID.showModal() method -->
+
+<dialog id="modal" class="modal modal-bottom sm:modal-middle">
+  <div class="modal-box w-full p-6 rounded-3xl ">
+   
+   <div id="modal-details" class="p-6 border-2 border-[#EDF7FF] rounded-xl">
+    <div id="synonym" class='flex gap-2'> 
+      
+ </div>
+   </div> 
+   
+    <div class="modal-action justify-start">
+      <form method="dialog">
+        <!-- if there is a button, it will close the modal -->
+        <button class="btn btn-primary mt-3">Complete Learning</button>
+      </form>
+    </div>
+  </div>
+</dialog>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script src="java.js"></script>
+</body>
+</html>
